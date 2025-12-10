@@ -1,0 +1,332 @@
+/* andes/frontend/src/UserDashboard.css */
+
+/* --- General Dashboard Layout --- */
+.dashboard-page {
+    background-color: var(--light-gray);
+    padding: 40px 0 80px;
+    min-height: 80vh;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Sidebar (fixed width) and Main Content */
+    gap: 30px;
+    align-items: start;
+}
+
+/* --- Sidebar (User Info and Navigation) --- */
+.sidebar {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+}
+
+.user-info-card {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid var(--dark-gray);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.user-info-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.user-info-card p {
+    font-size: 0.9em;
+    color: var(--light-text-color);
+}
+
+.btn-logout {
+    background-color: var(--bn-red);
+    color: var(--white);
+    padding: 8px 15px;
+    font-size: 0.9em;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.dashboard-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-nav li {
+    padding: 12px 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.dashboard-nav li:hover,
+.dashboard-nav li:first-child { /* Simulate 'Active' item */
+    background-color: #e6f7ff;
+    color: var(--primary-color);
+    border-left: 3px solid var(--primary-color);
+    font-weight: 600;
+}
+
+.dashboard-nav li i {
+    margin-right: 10px;
+}
+
+/* --- Main Content Sections --- */
+.main-content {
+    padding-top: 20px;
+}
+
+/* --- Balance Card --- */
+.balance-card {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-card h3 {
+    color: var(--accent-color);
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.balance-amount {
+    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin: 5px 0 0;
+    color: var(--white);
+}
+
+.btn-transfer {
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    font-weight: 700;
+}
+
+/* --- Card Management --- */
+.card-management-section {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.card-management-section h3 {
+    border-bottom: 1px solid var(--dark-gray);
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+.credit-card-info p, .card-application-info p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.btn-block-card {
+    background-color: var(--bn-red);
+    color: var(--white);
+    font-size: 0.9em;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+.btn-apply-card {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 0.9em;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+/* --- Transaction History --- */
+.transaction-history {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.transaction-history h3 {
+    border-bottom: 1px solid var(--dark-gray);
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+.transaction-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.transaction-history th, .transaction-history td {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--dark-gray);
+    font-size: 0.95em;
+}
+
+.transaction-history th {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.text-danger { color: var(--bn-red); font-weight: 600; }
+.text-success { color: #28a745; font-weight: 600; }
+
+.view-all-link {
+    display: block;
+    margin-top: 20px;
+    text-align: right;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 850px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .sidebar {
+        padding: 0;
+    }
+    .dashboard-nav ul {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: 8px;
+    }
+    .dashboard-nav li {
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        flex: 0 0 auto;
+    }
+    .dashboard-nav li:hover,
+    .dashboard-nav li:first-child {
+        border-left: none;
+        border-bottom: 3px solid var(--primary-color);
+    }
+    .balance-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .btn-transfer {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+/* Add this to andes/frontend/src/UserDashboard.css */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-greeting {
+    color: white;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+.btn-logout-header {
+    background-color: #fca311; /* Accent color */
+    color: #004085; /* Primary color */
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+/* --- Action Menu Card Styling (New Section) --- */
+.action-menu-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.action-menu-card h4 {
+    color: #004085; /* Primary Blue */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.action-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.action-list li {
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 0.95em;
+    color: #333;
+    border-bottom: 1px dotted #eee;
+    transition: background-color 0.2s;
+}
+
+.action-list li:last-child {
+    border-bottom: none;
+}
+
+.action-list li:hover {
+    background-color: #f7f9fb;
+    color: #fca311; /* Accent Gold */
+}
+
+.action-list li i {
+    margin-right: 10px;
+    color: #004085;
+}
+/* --- Dashboard Mobile Breakpoint (Max Width 992px) --- */
+@media (max-width: 992px) {
+
+    /* 1. Dashboard Grid Collapse */
+    .dashboard-grid {
+        grid-template-columns: 1fr !important; /* Stack sidebar and main content */
+        gap: 20px;
+    }
+
+    /* 2. Action Menu and User Info Full Width */
+    .sidebar {
+        padding: 0;
+        box-shadow: none; /* Remove shadow to make it feel continuous */
+    }
+
+    /* 3. Balance Card Adjustment */
+    .balance-card {
+        flex-direction: column; /* Stack amount and transfer button */
+        align-items: flex-start;
+    }
+
+    .btn-transfer {
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 4. Transaction Table Horizontal Scroll (Necessary for small screens) */
+    .transaction-history {
+        overflow-x: auto;
+    }
+    .transaction-history table {
+        min-width: 600px; /* Prevent table from squishing too much */
+    }
+}

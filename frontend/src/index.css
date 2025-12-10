@@ -1,0 +1,644 @@
+/* andes/frontend/src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+@import url('./loadingscreen.css');
+/* Ensure other imports like Google Fonts follow this line */
+:root {
+    --primary-color: #004085; /* Deep Blue - Bank Primary */
+    --secondary-color: #007bff; /* Brighter Blue - Accents */
+    --accent-color: #fca311; /* Gold/Orange - Call to action highlight */
+    --text-color: #333;
+    --light-text-color: #555;
+    --white: #fff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #e9ecef;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-gray);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.8em; }
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* Specific button styles for the header and hero sections */
+.btn-access {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 8px 18px;
+    font-size: 0.9em;
+    border: 1px solid var(--accent-color);
+}
+.btn-access:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-color: var(--primary-color);
+}
+
+.btn-cta { /* Hero section call to action */
+    background-color: var(--accent-color);
+    color: var(--primary-color); /* Dark text on gold for readability */
+    padding: 15px 35px;
+    font-size: 1.1em;
+    margin-right: 15px;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 4px 10px rgba(252, 163, 17, 0.4);
+}
+.btn-cta:hover {
+    background-color: darken(var(--accent-color), 5%); /* Slightly darker gold */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(252, 163, 17, 0.6);
+}
+
+/* Utility for icons */
+.fas, .fab {
+    margin-right: 8px;
+}
+
+/* Global sections padding */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--dark-gray);
+}
+/* --- High-Contrast Redesign Styles (Andes Prime Bank Theme) --- */
+
+:root {
+    --primary-blue: #004085;   /* Deep Blue (Core Identity) */
+    --accent-gold: #fca311;     /* Gold/Orange (Primary Action) */
+    --secondary-white: #ffffff;
+    --text-dark: #333;
+    --background-light: #f4f6f8;
+}
+
+/* Base Header Styling */
+.simple-header {
+    background-color: var(--primary-blue);
+    color: var(--secondary-white);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.simple-header h1 {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Navigation Links (Matches the look of the red website top bar) */
+.main-nav a {
+    color: var(--secondary-white);
+    text-decoration: none;
+    font-size: 0.95em;
+    margin-left: 20px;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+.main-nav a:hover {
+    color: var(--accent-gold);
+}
+
+/* Login Button in Header */
+.btn-login-nav {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 8px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.95em;
+}
+
+/* --- HERO SECTION REDESIGN --- */
+
+.hero-redesign {
+    background-color: var(--primary-blue);
+    padding: 120px 0 80px; /* Large vertical padding */
+    text-align: center;
+    color: var(--secondary-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-heading {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-tagline {
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    font-weight: 400;
+    color: #ccc;
+}
+
+.hero-subtext {
+    font-size: 1em;
+    margin-top: 30px;
+    color: #ddd;
+}
+
+/* OPEN ACCOUNT BUTTON (Enlarged) */
+.btn-open-account {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 18px 45px; /* Significantly increased size */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 1.2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+}
+.btn-open-account:hover {
+    background-color: #e6920f;
+}
+
+/* --- FEATURE GRID REDESIGN --- */
+
+.feature-grid-redesign {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 0;
+    background-color: var(--secondary-white);
+}
+
+.feature-item-redesign {
+    text-align: center;
+    color: var(--primary-blue);
+    width: 150px;
+    transition: transform 0.2s;
+}
+.feature-item-redesign:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: var(--accent-gold);
+}
+
+.feature-item-redesign p {
+    font-weight: 600;
+}
+/* Add this to your main CSS file (e.g., index.css) */
+
+.simple-header .logo {
+    display: flex; /* Ensures icon and name align */
+    align-items: center;
+}
+
+/* Fix: Makes the bank name/logo behave like a button/link */
+.simple-header .clickable-home {
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.simple-header .clickable-home:hover {
+    opacity: 0.85;
+}
+/* --- Global Styles for Authentic Banking Look --- */
+:root {
+    --primary-blue: #004085;
+    --accent-gold: #fca311;
+    --text-dark: #333;
+}
+
+/* 1. Persistent Header Bar */
+.simple-header.auth-banking-header {
+    position: sticky; /* Makes it stick to the top */
+    top: 0;
+    z-index: 1000;
+    background-color: var(--primary-blue); /* Solid dark background */
+}
+
+/* 2. Login Button Redesign (Larger Button) */
+.btn-large-cta {
+    padding: 18px 50px !important; /* Significantly increased padding */
+    font-size: 1.25em !important;
+    font-weight: 700 !important;
+    border-radius: 6px !important;
+    /* Other styles inherited from the accent-gold button */
+}
+
+/* 3. Header Navigation and Logo */
+.simple-header .logo h1 {
+    font-size: 1.6em; /* Slightly larger bank name */
+}
+
+.simple-header .main-nav a {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-left: 25px;
+}
+
+/* 4. Feature Grid Adjustment for 6 items */
+.feature-authentic-spacing {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    max-width: 1400px; /* Wider content area */
+    margin: 0 auto;
+}
+
+.feature-authentic-spacing .feature-item-redesign {
+    flex-basis: 15%; /* Ensures six items fit well */
+    padding: 10px;
+}
+/* --- Bottom Content Section Styling --- */
+
+.bottom-content-section {
+    background-color: var(--background-light); /* Light Gray */
+    padding: 60px 0;
+    border-top: 1px solid #ddd;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* News takes more space */
+    gap: 40px;
+}
+
+.news-promotions h3, .security-fraud h3 {
+    color: var(--primary-blue);
+    font-size: 1.6em;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--accent-gold);
+    padding-bottom: 5px;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.news-item h4 {
+    font-size: 1.1em;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.view-more-link {
+    display: inline-block;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Security Box */
+.security-box {
+    background-color: var(--secondary-white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.security-icon {
+    font-size: 3em;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.security-link {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* --- Expanded Footer Grid --- */
+.simple-footer.footer-redesign {
+    background-color: var(--primary-blue);
+    color: #ccc;
+    padding: 40px 0 0;
+}
+
+.footer-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #1a56a6;
+}
+
+.footer-column h4 {
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.footer-column a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.footer-bottom-bar {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8em;
+    background-color: #003366; /* Slightly darker bottom bar */
+    color: #999;
+}
+/* --- Global Mobile Breakpoint (Max Width 768px) --- */
+@media (max-width: 768px) {
+
+    /* Global Container Padding Adjustment */
+    .container {
+        padding: 0 15px !important; /* Reduce side padding */
+    }
+
+    /* 1. Simple Header Collapse */
+    .simple-header .header-container {
+        flex-wrap: wrap; /* Allow items to stack */
+        justify-content: center; /* Center main logo */
+    }
+
+    /* Hide the main navigation and login button on mobile */
+    .simple-header .main-nav,
+    .simple-header .btn-login-nav {
+        display: none !important;
+    }
+
+    /* Re-center the Logo */
+    .simple-header .logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    /* 2. Homepage Hero Section Text Scaling */
+    .hero-heading {
+        font-size: 2em !important; /* Scale down heading */
+    }
+
+    .hero-tagline {
+        font-size: 1.1em !important;
+    }
+
+    /* 3. Homepage Feature Grid Collapse */
+    .feature-grid-redesign {
+        flex-wrap: wrap; /* Allow icons to wrap onto new lines */
+    }
+
+    .feature-item-redesign {
+        flex-basis: 45%; /* Two items per row */
+        margin-bottom: 20px;
+    }
+}
+/* --- Layout/Grid Fixes (Max Width 800px) --- */
+@media (max-width: 800px) {
+
+    /* 1. Dashboard Grid Collapse (UserDashboard.jsx) */
+    .dashboard-grid {
+        grid-template-columns: 1fr !important; /* Sidebar and Main Content Stack */
+        gap: 30px;
+    }
+
+    /* Ensure sidebar content spans full width when stacked */
+    .user-info-card, .action-menu-card {
+        margin-bottom: 15px;
+    }
+
+    /* Transaction Table Scroll */
+    .transaction-history {
+        overflow-x: auto;
+    }
+    .transaction-history table {
+        min-width: 650px; /* Ensures columns are not crushed */
+    }
+
+    /* 2. Form Grid Collapse (ProfileBuilder.jsx) */
+    .form-group-grid {
+        grid-template-columns: 1fr !important; /* Single column stacking */
+    }
+
+    /* 3. Bottom Content Grid Collapse (App.jsx) */
+    .content-grid {
+        grid-template-columns: 1fr !important; /* News and Security Stack */
+        gap: 30px;
+    }
+
+    /* 4. Footer Grid Collapse */
+    .footer-grid-container {
+        grid-template-columns: 1fr 1fr !important; /* Two columns per row */
+        gap: 20px;
+    }
+
+    .footer-column {
+        margin-bottom: 15px;
+    }
+}
+/* --- Definitive Mobile Breakpoint (Max Width 800px) --- */
+@media (max-width: 800px) {
+
+    /* Global Container Padding Adjustment */
+    .container {
+        padding: 0 15px !important;
+    }
+
+    /* 1. Simple Header Collapse and Nav Hiding */
+    .simple-header .header-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 15px;
+    }
+
+    /* Hide Navigation Links and Login Button on Small Screens */
+    .simple-header .main-nav,
+    .btn-login-nav {
+        display: none !important;
+    }
+
+    /* Re-center the Logo and Bank Name */
+    .simple-header .logo {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        font-size: 1.1em; /* Scale down bank name slightly */
+    }
+
+    /* 2. Homepage Hero Section Scaling */
+    .hero-heading {
+        font-size: 2.2em !important;
+    }
+
+    .hero-tagline {
+        font-size: 1.1em !important;
+        margin-bottom: 25px !important;
+    }
+
+    .hero-authentic .container {
+        padding: 60px 0 !important; /* Reduce vertical padding on mobile hero */
+    }
+
+    /* 3. Primary CTA Button Scaling */
+    .btn-large-cta {
+        padding: 15px 30px !important;
+        font-size: 1.1em !important;
+    }
+
+    /* 4. Feature Grid (Service Icons) Collapse */
+    .feature-authentic-spacing {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 30px 0 !important;
+        justify-content: space-between;
+    }
+
+    .feature-item-redesign {
+        flex-basis: 30%; /* Three items per row */
+        margin-bottom: 20px;
+        font-size: 0.85em;
+    }
+
+    .feature-icon {
+        font-size: 2.5em !important;
+    }
+}
+/* --- New CSS Section for Mobile Login Button --- */
+
+/* Show a small mobile header bar with the Login button */
+.simple-header .mobile-login-bar {
+    display: flex !important;
+    justify-content: flex-end; /* Push button to the right */
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #003366; /* Slightly darker than main blue */
+}
+
+/* Ensure the Login button itself is visible and styled correctly */
+.simple-header .btn-login-nav {
+    display: inline-block !important; /* Override the previous 'display: none' */
+    padding: 8px 15px; /* Smaller padding for mobile */
+    font-size: 0.9em;
+}
+
+/* --- Ensure the Main Header Logic is Adjusted in App.jsx ---
+   Note: This requires a minor modification to App.jsx to render the mobile-login-bar div.
+   (The following CSS assumes you add a wrapper div around the button in App.jsx)
+*/
+/* --- Fix: Feature Grid Alignment and Spacing --- */
+
+@media (max-width: 800px) {
+
+    /* 1. Ensure the container for the icons centers its content */
+    .feature-authentic-spacing {
+        flex-wrap: wrap;
+        justify-content: space-evenly !important; /* Distribute space evenly */
+        align-items: flex-start;
+        gap: 15px 5px; /* Reduce row/column gap */
+        padding: 30px 15px !important;
+    }
+
+    /* 2. Set item basis and ensure text is centered */
+    .feature-item-redesign {
+        flex-basis: 30% !important; /* Three items per row */
+        margin: 0; /* Remove unnecessary margin */
+        padding: 5px;
+        text-align: center; /* Crucial for aligning text and icons */
+    }
+
+    /* 3. Scale down icon size for better mobile fit */
+    .feature-icon {
+        font-size: 2em !important;
+    }
+}

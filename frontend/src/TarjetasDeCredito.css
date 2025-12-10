@@ -1,0 +1,182 @@
+/* andes/frontend/src/TarjetasDeCredito.css */
+
+/* --- General Structure & Typography --- */
+.tc-page {
+    background-color: var(--white);
+    padding-top: 0;
+}
+.ctn-interno-cuerpo {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.interno-cuerpo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+.nivel-1 { list-style: disc inside; padding-left: 0; }
+.nivel-2 { list-style: circle inside; padding-left: 20px; margin-top: 5px; }
+.nivel-1 li, .nivel-2 li { margin-bottom: 5px; font-size: 0.95em; color: var(--text-color); }
+.sin-estilos-txt { list-style: none; padding-left: 0; }
+.sin-estilo-lista { list-style: none; }
+.nivel-1-numeracion { list-style: decimal inside; }
+
+/* --- BANNER (Top Carousel Placeholder) --- */
+.ctn-banner {
+    background: linear-gradient(to right, var(--bn-red), #F44336); /* Using BN's distinct red for the banner */
+    min-height: 250px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+.slide-txt { padding: 20px; max-width: 1200px; margin: 0 auto; }
+.slider-txt-title { font-family: 'Montserrat', sans-serif; font-size: 2.2em; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.slider-txt-sub p { font-size: 1.1em; opacity: 0.9; margin-bottom: 25px; }
+.slider-btn { background-color: var(--accent-color); color: var(--primary-color); padding: 12px 30px; border-radius: 5px; font-weight: 700; }
+
+/* --- BREADCRUMB --- */
+.pre-cuerpo-ruta {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: var(--light-text-color);
+    margin-bottom: 20px;
+}
+.pre-cuerpo-ruta a, .pre-cuerpo-ruta p { margin: 0 5px; color: var(--light-text-color); }
+.pre-cuerpo-ruta .actual { font-weight: 600; color: var(--primary-color); }
+
+/* --- VENTAJAS Y BOTONES --- */
+.pre-cuerpo-ventajas-btn {
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+.pre-cuerpo-ventajas-btn-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed var(--dark-gray);
+}
+.pre-cuerpo-ventajas-btn-izq-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.ventajas-info {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.ventajas-info-item {
+    text-align: center;
+}
+.ventajas-info-item i {
+    font-size: 2.5em;
+    color: var(--bn-red);
+    margin-bottom: 5px;
+}
+.ventajas-info-item-title {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1em;
+}
+.ventajas-info-item p {
+    font-size: 0.8em;
+    color: var(--light-text-color);
+    margin: 0;
+}
+.pre-cuerpo-ventajas-btn-der {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.pre-cuerpo-ventajas-btn-der-btn {
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+.btn-simulate {
+    background-color: var(--white);
+    color: var(--bn-red);
+    border-color: var(--bn-red);
+}
+.btn-simulate:hover { background-color: var(--bn-red); color: var(--white); }
+.btn-whatsapp { background-color: #25D366; color: var(--white); }
+.btn-promotions { background-color: var(--accent-color); color: var(--primary-color); }
+
+
+/* --- ACCORDION CONTENT --- */
+.ctn-title-desglosable-general {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.ctn-prest-title {
+    border: 1px solid var(--dark-gray);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.ctn-prest-title.active {
+    border-color: var(--primary-color);
+}
+.ctn-pre-txt-title {
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 15px 20px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--dark-gray);
+}
+.ctn-prest-title.active .ctn-pre-txt-title {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.ctn-prest-title.active .ctn-pre-txt-title .pp-title {
+    color: var(--white);
+}
+.ctn-prest-title .pp-title {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.pp-txt-enlaces {
+    padding: 20px;
+    background-color: var(--white);
+    border-top: none;
+    /* This should be controlled by React state for accordion effect */
+    display: block;
+}
+
+.enlaces-documentos {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-right: 15px;
+    display: inline-block;
+    margin-top: 5px;
+}
+.enlaces-documentos svg {
+    fill: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .pre-cuerpo-ventajas-btn-izq {
+        align-items: center;
+        text-align: center;
+    }
+}

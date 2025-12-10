@@ -1,0 +1,126 @@
+/* andes/frontend/src/Tarifario.css */
+
+.tarifario-page h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.tabla-tarifas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--white);
+}
+
+.tabla-tarifas th, .tabla-tarifas td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 0.95em;
+}
+
+.tabla-tarifas th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.tabla-tarifas tbody tr:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+.tabla-tarifas tbody tr:hover {
+    background-color: #e0f7fa; /* Light blue hover for professionalism */
+}
+
+/* Responsive Table Adjustments */
+@media (max-width: 768px) {
+    .tabla-tarifas, .tabla-tarifas thead, .tabla-tarifas tbody, .tabla-tarifas th, .tabla-tarifas td, .tabla-tarifas tr {
+        display: block;
+    }
+    .tabla-tarifas thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .tabla-tarifas tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    .tabla-tarifas td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+    /* Hide the original header labels and use data attributes for context (complex to implement in this scope, so we skip dynamic labels) */
+    .tabla-tarifas td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 600;
+        color: var(--primary-color);
+        text-align: left;
+    }
+}
+/* andes/frontend/src/Tarifario.css */
+
+.tarifario-page h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.tabla-tarifas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--white);
+}
+
+.tabla-tarifas th, .tabla-tarifas td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 0.95em;
+}
+
+.tabla-tarifas th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.tabla-tarifas tbody tr:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+.tabla-tarifas tbody tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* Responsive Table Adjustments */
+@media (max-width: 768px) {
+    .tabla-tarifas {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap; /* Prevents text wrap for mobile view */
+    }
+}

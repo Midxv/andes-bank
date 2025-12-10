@@ -1,0 +1,136 @@
+/* andes/frontend/src/LoginPortal.css */
+
+/* --- Page and Container Styling --- */
+.login-page {
+    background-color: var(--light-gray);
+    min-height: 80vh;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    max-width: 450px;
+}
+
+.login-box {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-box h2 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+.login-box .subtitle {
+    color: var(--light-text-color);
+    margin-bottom: 30px;
+    font-size: 1em;
+}
+
+/* --- Form Elements --- */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--dark-gray);
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(252, 163, 17, 0.2);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-top: 10px;
+    background-color: var(--primary-color); /* Main CTA color for Login */
+    color: var(--white);
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #002d5c; /* Slightly darker blue on hover */
+}
+
+/* --- Links and Messages --- */
+.login-links {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.login-links a {
+    color: var(--secondary-color);
+    margin: 0 5px;
+}
+
+.login-links span {
+    color: var(--dark-gray);
+}
+
+.login-error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+/* Add this to andes/frontend/src/LoginPortal.css */
+
+.login-links {
+    margin-top: 20px;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-links a {
+    color: #004085;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-links .separator {
+    color: #ccc;
+}
+
+.support-phone {
+    color: #555;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.support-phone i {
+    color: #fca311; /* Accent Gold */
+}

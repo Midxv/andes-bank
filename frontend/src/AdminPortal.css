@@ -1,0 +1,202 @@
+/* andes/frontend/src/AdminPortal.css */
+
+:root {
+    --primary-admin: #1e3a8a; /* Darker Blue for Admin Focus */
+    --secondary-admin: #fca311; /* Gold Accent */
+    --delete-color: #dc2626;
+    --background-light: #f4f6f8;
+    --text-dark: #333;
+    --border-light: #e5e7eb;
+    --white: #fff;
+}
+
+/* --- Global Admin Styles --- */
+.admin-dashboard {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+.admin-header {
+    background-color: var(--primary-admin);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header h1 {
+    color: var(--white);
+    margin-bottom: 5px;
+    font-size: 1.8em;
+}
+
+.admin-header p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.admin-header .btn-primary {
+    background-color: var(--secondary-admin);
+    color: var(--primary-admin);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* --- Main Content and Table --- */
+.admin-content {
+    padding: 40px 0;
+}
+
+.admin-content h2 {
+    color: var(--primary-admin);
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+
+.user-table-wrapper {
+    overflow-x: auto;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px; /* Ensure readability on smaller screens */
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 0.9em;
+}
+
+table th {
+    background-color: #eef1f4;
+    color: var(--primary-admin);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+table tbody tr:hover {
+    background-color: #f7f9fb;
+}
+
+.balance {
+    font-weight: 600;
+}
+
+.btn-delete {
+    background-color: var(--delete-color);
+    color: var(--white);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+/* --- Modal Styling --- */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content-admin {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-header-admin h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.modal-header-admin button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+.form-grid-admin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group-admin {
+    margin-bottom: 10px;
+}
+
+.form-group-admin label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.form-group-admin input, .form-group-admin select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+}
+
+.btn-submit-admin {
+    width: 100%;
+    background-color: var(--secondary-admin);
+    color: var(--primary-admin);
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.status-message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.status-message.error { color: var(--delete-color); }
+.status-message.success { color: #22c55e; }
