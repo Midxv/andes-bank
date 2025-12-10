@@ -1,6 +1,6 @@
 /* andes/frontend/src/index.css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
-@import url('./loadingscreen.css');
+@import url('./LoadingScreen.css');
 /* Ensure other imports like Google Fonts follow this line */
 :root {
     --primary-color: #004085; /* Deep Blue - Bank Primary */
