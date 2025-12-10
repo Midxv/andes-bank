@@ -5,5 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
     plugins: [react()],
     // base: '/andes-bank/',  <-- REMOVE OR COMMENT OUT THIS LINE
-    base: '/', // Set it to root for custom domains
+    base: '/', // Set it to root for custom domains //ed
+    base: '/', // Set it to root for custom domains //ed
 })
